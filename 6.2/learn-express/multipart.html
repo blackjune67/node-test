@@ -10,7 +10,7 @@
     document.getElementById('form').addEventListener('submit', (e) => {
         console.log('==> e ', e);
         e.preventDefault();
-        const formData = new formData();
+        const formData = new FormData();
         formData.append('pdf', e.target.pdf.files[0])
         formData.append('pdf', e.target.pdf.files[1])
         formData.append('pdf', e.target.pdf.files[2])

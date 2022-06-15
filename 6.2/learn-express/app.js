@@ -1,4 +1,8 @@
 const express = require('express');
+
+const dotenv = require('dotenv');
+dotenv.config();
+
 const path = require('path');
 const { nextTick } = require('process');
 const morgan = require('morgan');
@@ -9,6 +13,7 @@ const fs = require('fs');
 
 const app = express();
 
+
 // * 앱 관련 설정
 app.set('port', process.env.PORT || 3000);
 
@@ -18,7 +23,7 @@ app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(cookieParser(process.env.COOKIE_SECRET));
 
 try {
     fs.readdirSync('uploads');
