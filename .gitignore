@@ -12,6 +12,6 @@ yarn-error.log
 coverage
 
 # config folder & file
-config
+config/
 9.5/learn-express/config
-.config.json
+*.config.json
