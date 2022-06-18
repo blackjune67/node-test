@@ -13,4 +13,5 @@ coverage
 
 # config folder & file
 config
+9.5/learn-express/config
 .config.json
